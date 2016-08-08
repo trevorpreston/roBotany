@@ -2,7 +2,6 @@ var gpio = require('rpi-gpio');
 
 
 function turnOn(req,res,next){
-  gpio.setMode(MODE_BCM);
   gpio.setup(7, gpio.DIR_OUT, write);
 
   function write(){
@@ -15,7 +14,6 @@ function turnOn(req,res,next){
 
 
 function turnOff(req,res,next){
-  gpio.setMode(MODE_BCM);
   gpio.setup(7, gpio.DIR_OUT, write);
 
   function write(){
