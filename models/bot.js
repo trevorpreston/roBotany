@@ -10,6 +10,7 @@ function turnOn(req,res,next){
       console.log('pump is on!')
     })
   }
+  next()
 }
 
 
@@ -22,6 +23,7 @@ function turnOff(req,res,next){
       console.log('pump turned off!')
     })
   }
+  next()
 }
 
 
