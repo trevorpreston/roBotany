@@ -1,0 +1,30 @@
+{
+  "name": "robotany",
+  "version": "1.0.0",
+  "description": "plant watering robot",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "rpi-gpio": "^0.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trevp3/roBotany.git"
+  },
+  "author": "Trevor Preston",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trevp3/roBotany/issues"
+  },
+  "homepage": "https://github.com/trevp3/roBotany#readme"
+}
