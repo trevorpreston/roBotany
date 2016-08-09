@@ -4,12 +4,14 @@ const logger                   = require('morgan')
 const bodyParser               = require('body-parser');
 const methodOverride           = require('method-override');
 const path                     = require('path');
+const cron                     = require('./services/cron');
 // var gpio                       = require('rpi-gpio');
 
 
-const homeRoutes           = require('./routes/home-routes');
+const homeRoutes               = require('./routes/home-routes');
 const app                      = express();
 const PORT                     = process.env.PORT || 3000
+
 
 
 
@@ -34,3 +36,9 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use('/', homeRoutes);
 
 
+cron
+
+
+// cron.schedule('* * * * *', function(){
+//   console.log('running a task every minute');
+// });
