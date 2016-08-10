@@ -1,5 +1,13 @@
 // var gpio = require('rpi-gpio');
 
+const cron                     = require('node-cron');
+
+var cycleTime = '* * * * *'
+
+cron.schedule( cycleTime, function(){
+  console.log('running a task every minute');
+});
+
 
 // function turnOn(req,res,next){
 //   gpio.setup(7, gpio.DIR_OUT, write);
@@ -39,3 +47,5 @@
 // // }
 
 // module.exports = { turnOn, turnOff }
+
+// module.exports = {cron}

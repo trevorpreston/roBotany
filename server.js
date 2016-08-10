@@ -4,7 +4,7 @@ const logger                   = require('morgan')
 const bodyParser               = require('body-parser');
 const methodOverride           = require('method-override');
 const path                     = require('path');
-const cron                     = require('./services/cron');
+const cron                     = require('./models/bot');
 // var gpio                       = require('rpi-gpio');
 
 
@@ -31,7 +31,6 @@ app.listen(PORT, function(){
 
 app.set('views', path.join(__dirname,'views'));
 app.use(express.static(path.join(__dirname,'public')));
-
 
 app.use('/', homeRoutes);
 
