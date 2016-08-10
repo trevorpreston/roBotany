@@ -1,11 +1,11 @@
-const cron                     = require('node-cron');
+// const cron                     = require('node-cron');
 
 
-var cycleTime = '22 * * * *'
+// var cycleTime = '* * * * *'
 
-cron.schedule( cycleTime, function(){
-  console.log('running a task every minute');
-});
+// cron.schedule( cycleTime, function(){
+//   console.log('running a task every minute');
+// });
 
 
 // var rule = new cron.RecurrenceRule();

@@ -1,12 +1,11 @@
-'use string'
-
+'use strict'
 const db = require('./connections.js')
 
-function getAllPlantNames(req,res,next){
-  db.any(`SELECT name FROM plant_data;`)
+function getAllPlants(req,res,next){
+  db.any(`SELECT * FROM plant_data;`)
     .then(data=>{
-      console.log('THIS IS DATA: '+data)
-      res.rows = data;
+      console.log('THIS IS DATA: '+ data)
+      res.allplants = data;
       next();
     })
     .catch(error=>{
@@ -14,4 +13,4 @@ function getAllPlantNames(req,res,next){
     })
 }
 
-module.exports = { getAllPlantNames }
+module.exports = { getAllPlants }

@@ -1,3 +1,33 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,11 +45,13 @@
   <form action="/off" method="get">
     <input type="submit" value="OFF" name="off-btn">
   </form>
-  <form>
-    <p>pick your plant</p>
+  <form method="put" action="/active">
+    <p><%= stuff %></p>
     <select name="createType" id="addRoute inputType">
+
       <option value="gym">gym</option>
     </select>
+
   </form>
 
 </body>
