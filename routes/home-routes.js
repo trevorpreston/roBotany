@@ -12,7 +12,7 @@ router.get('/', (req,res)=>{
 });
 
 router.get('/dash', getAllPlants, getCurrentActivePlant, (req,res)=>{
-  res.render('dash', {plants: res.allplants, activePlant: res.active})
+  res.render('dash', {plants: res.allplants, activePlant: res.active, waterFreq: res.freq})
 });
 
 router.get('/plants', getAllPlants, (req,res)=>{
