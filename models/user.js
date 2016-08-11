@@ -13,9 +13,10 @@ function setNewActivePlant(req,res,next){
 }
 
 function getCurrentActivePlant(req,res,next){
-  db.one(`SELECT active_plant FROM users WHERE user_id=1;`)
+  db.one(`SELECT * FROM plant_data INNER JOIN users ON (plant_data.plant_id = users.active_plant) WHERE user_id=1;`)
     .then(data => {
-      res.active = data.active_plant;
+      res.active = data.name;
+      res.freq = data.frequency;
       next();
     })
     .catch( error=> {
@@ -25,5 +26,3 @@ function getCurrentActivePlant(req,res,next){
 
 module.exports = { setNewActivePlant, getCurrentActivePlant }
 
-
-// module.exports = { activePlant }
