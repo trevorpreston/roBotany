@@ -1,10 +1,14 @@
-// const cron                     = require('node-cron');
+// const cron                      = require('node-cron');
+// const { cycleTime }              = require('../models/user.js')
 
+// console.log( 'cycleTime is ' + cycleTime )
 
-// var cycleTime = '* * * * *'
+// var onemin = '* * * * *'
 
-// cron.schedule( cycleTime, function(){
+// cron.schedule( onemin, function(){
 //   console.log('running a task every minute');
+//   console.log( 'cycleTime is ' + cycleTime )
+
 // });
 
 

@@ -1,39 +1,29 @@
-// var gpio = require('rpi-gpio');
+// const gpio = require('rpi-gpio');
 
-const cron                     = require('node-cron');
+const cron                   = require('node-cron');
+const db                     = require('./connections.js')
 
-var cycleTime = '* * * * *'
+let cycleTime = '*/2 * * * *'
+var oneMin = '* * * * *'
 
-cron.schedule( cycleTime, function(){
-  console.log('running a task every minute');
-});
+function setCron(){
+  cron.schedule( cycleTime, function(){
+    console.log( 'cycleTime in the bot is ' + cycleTime )
+  });
+}
 
-
-// function turnOn(req,res,next){
-//   gpio.setup(7, gpio.DIR_OUT, write);
-
-//   function write(){
-//     gpio.write(7, true, function(err){
-//       if(err) throw err;
-//       console.log('pump is on!')
-//     })
-//   }
-//   next()
-// }
-
-
-// function turnOff(req,res,next){
-//   gpio.setup(7, gpio.DIR_OUT, write);
-
-//   function write(){
-//     gpio.write(7, false, function(err){
-//       if(err) throw err;
-//       console.log('pump turned off!')
-//     })
-//   }
-//   next()
-// }
-
+function setCycleTime(req,res,next){
+  db.one(`SELECT * FROM plant_data INNER JOIN users ON (plant_data.plant_id = users.active_plant) WHERE user_id=1;`)
+    .then(data => {
+      cycleTime = '*/' + data.frequency.toString() + ' * ' + '* ' + '* ' + '*';
+      setCron();
+      console.log()
+      next()
+    })
+    .catch( error=> {
+      console.log('Error ', error)
+    })
+}
 
 // function turnOn(req,res,next){
 //   gpio.setup(7, gpio.DIR_OUT, write);
@@ -61,17 +51,9 @@ cron.schedule( cycleTime, function(){
 // }
 
 
-// // function turnOn(req,res,next){
-// //   console.log("ROBOT ON!!!!!!");
-// //   next()
-// // }
 
 
-// // function turnOff(req,res,next){
-// //   console.log("ROBOT OFF!!");
-// //   next()
-// // }
-
+module.exports = { setCycleTime }
 // module.exports = { turnOn, turnOff }
 
 // module.exports = {cron}

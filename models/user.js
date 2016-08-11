@@ -17,12 +17,14 @@ function getCurrentActivePlant(req,res,next){
     .then(data => {
       res.active = data.name;
       res.freq = data.frequency;
+      console.log( 'cycleTime in the model is ' + cycleTime + 'with a type of ' + (typeof  cycleTime))
       next();
     })
     .catch( error=> {
       console.log('Error ', error)
     })
 }
+
 
 module.exports = { setNewActivePlant, getCurrentActivePlant }
 
