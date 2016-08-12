@@ -8,9 +8,10 @@ const { setNewActivePlant, getCurrentActivePlant } = require('../models/user.js'
 
 
 
-router.get('/', (req,res)=>{
-  res.render('index')
+router.get('/', getAllPlants, getCurrentActivePlant, (req,res)=>{
+  res.render('index', {plants: res.allplants, activePlant: res.active, waterFreq: res.freq})
 });
+
 
 router.get('/dash', getAllPlants, getCurrentActivePlant, (req,res)=>{
   res.render('dash', {plants: res.allplants, activePlant: res.active, waterFreq: res.freq})
