@@ -1,9 +1,10 @@
 
 console.log("present!")
-// const { turnOn, turnOff } = require('../models/bot')
-const { setCycleTime }            = require('../models/bot')
+const { turnOn, turnOff } = require('../models/bot')
 const router                      = require('express').Router();
-const { getAllPlants }            = require('../models/plants.js')
+const { setCycleTime }            = require('../models/bot')
+const { getAllPlants }            = require('../models/plants')
+const { setBotTimer }             = require('../controllers/bot')
 const { setNewActivePlant, getCurrentActivePlant } = require('../models/user.js')
 
 
@@ -24,18 +25,18 @@ router.get('/active', (req,res)=>{
   res.redirect('/dash')
 })
 
-router.put('/active', setNewActivePlant, setCycleTime, (req,res)=>{
+router.put('/active', setNewActivePlant, setCycleTime, setBotTimer, (req,res)=>{
   res.redirect('/dash')
 })
 
 
-// router.get('/on', turnOn, function(req,res) {
-//   res.redirect('/');
-// });
+router.get('/on', turnOn, function(req,res) {
+  res.redirect('/');
+});
 
-// router.get('/off', turnOff, function(req,res) {
-//   res.redirect('/')
-// });
+router.get('/off', turnOff, function(req,res) {
+  res.redirect('/')
+});
 
 
 module.exports = router;

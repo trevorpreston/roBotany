@@ -2,9 +2,10 @@
 const db = require('./connections.js')
 
 function setNewActivePlant(req,res,next){
-  db.any(`UPDATE users set active_plant=$1 where user_id=1;`, [req.body.newPlant])
+  db.any(`UPDATE users SET active_plant=$1 WHERE user_id=1;`, [req.body.newPlant])
     .then(data => {
       res.rows = data;
+      console.log('New plant saved. ' + data)
       next();
     })
     .catch( error=> {
