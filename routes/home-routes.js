@@ -1,10 +1,10 @@
 
 console.log("present!")
-const { turnOn, turnOff } = require('../models/bot')
+const { setCycleTime }         = require('../models/bot')
 const router                      = require('express').Router();
 const { setCycleTime }            = require('../models/bot')
 const { getAllPlants }            = require('../models/plants')
-const { setBotTimer }             = require('../controllers/bot')
+const { setBotTimer, turnOn, turnOff }             = require('../controllers/bot')
 const { setNewActivePlant, getCurrentActivePlant } = require('../models/user.js')
 
 
