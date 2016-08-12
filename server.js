@@ -5,7 +5,7 @@ const bodyParser               = require('body-parser');
 const methodOverride           = require('method-override');
 const path                     = require('path');
 const cron                     = require('./models/bot');
-// var gpio                       = require('rpi-gpio');
+var gpio                       = require('rpi-gpio');
 
 
 const homeRoutes               = require('./routes/home-routes');

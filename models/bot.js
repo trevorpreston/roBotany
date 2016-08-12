@@ -1,4 +1,3 @@
-// const gpio = require('rpi-gpio');
 const cron                   = require('node-cron');
 const db                     = require('./connections.js')
 
