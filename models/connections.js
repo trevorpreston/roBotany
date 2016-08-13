@@ -1,11 +1,11 @@
 const pg = require('pg-promise')({});
 
 const config = {
-  host:       process.env.DB_HOST,
-  port:       process.env.DB_PORT,
+  host:       'localhost',
+  port:       '5432',
   database:   'robotanist',
-  user:       postgres,
-  password:   vaultin10,
+  user:       'postgres',
+  password:   'vaultin10'
 };
 const db = pg(config);
 
