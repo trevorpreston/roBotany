@@ -22,7 +22,7 @@ function setBotTimer(req,res,next){
     waterPlant();  //THIS
     console.log( 'Pump triggered at frequency: ' + res.cycleTime )
   });
-  // next()
+  next()
 }
 
 function waterPlant(){    //THIS
