@@ -35,9 +35,7 @@ router.get('/on', waterPlantNow, function(req,res) {
   res.redirect('/');
 });
 
-router.get('/off', turnOff, function(req,res) {
-  res.redirect('/')
-});
+
 
 
 module.exports = router;
