@@ -7,9 +7,9 @@ hardware schematic:
 ![](http://i.imgur.com/02PjJcx.png)
 
 ###hardware: 
-
+* Raspberry Pi 3 (https://www.adafruit.com/product/3055)
 * 1N4001 diode (http://adafru.it/755)
-* PN2222A transistor (http://adafru.it/756)
+* FQP30N06L Mosfet (https://www.amazon.com/10Pcs-FQP30N06L-FQP30N06-N-Channel-MOSFET/dp/B00VIDTNYM)
 * 12v 1000mA DC power supply (http://adafru.it/798)
 * peristaltic pump (http://adafru.it/1150)
 
