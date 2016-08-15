@@ -31,8 +31,8 @@ router.put('/active', setNewActivePlant, setCycleTime, setBotTimer, setStatusTim
 })
 
 
-router.get('/on', waterPlantNow, function(req,res) {
-  res.redirect('/');
+router.get('/on', waterPlantNow, setCycleTime, setBotTimer, setStatusTimer, calcNextWater, getAllPlants, getCurrentActivePlant, function(req,res) {
+  res.render('index', {plants: res.allplants, activePlant: res.active, waterFreq: res.freq, status: res.nextWater})
 });
 
 
