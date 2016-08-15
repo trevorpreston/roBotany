@@ -7,7 +7,6 @@ $(function(){
   let futureWaterDate
 
 
-  initiateBannerTimer()
   console.log('next watering datetime is ' + nextWaterDate)
 
   function checkWaterStatus(){
@@ -47,7 +46,7 @@ $(function(){
   }
 
   function wateringNowStatus(){
-    $('#statusBanner').css('background-color', '#A3FF85');
+    $('#statusBanner').css('background-color', '#C8E6C9');
     $('#bannerInfo').text('')
     $('#nextWaterDate').text('watering now')
   }
@@ -61,6 +60,8 @@ $(function(){
   function initiateBannerTimer(){
     bannerTimer = setInterval(checkWaterStatus, 1000);
   }
+    initiateBannerTimer()
+
 
   function updateBannerTimer(){
     clearInterval(bannerTimer);

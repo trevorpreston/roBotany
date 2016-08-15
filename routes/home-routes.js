@@ -4,7 +4,7 @@ const router                                       = require('express').Router()
 const { setCycleTime }                             = require('../models/bot')
 const { getAllPlants }                             = require('../models/plants')
 const { setStatusTimer, calcNextWater }            = require('../models/status')
-const { setBotTimer, turnOn, turnOff }             = require('../controllers/bot')
+const { setBotTimer, waterPlantNow }             = require('../controllers/bot')
 const { setNewActivePlant, getCurrentActivePlant } = require('../models/user.js')
 
 
@@ -31,7 +31,7 @@ router.put('/active', setNewActivePlant, setCycleTime, setBotTimer, setStatusTim
 })
 
 
-router.get('/on', turnOn, function(req,res) {
+router.get('/on', waterPlantNow, function(req,res) {
   res.redirect('/');
 });
 

@@ -1,6 +1,9 @@
 INSERT INTO plant_data (name, frequency) VALUES
-('orchid', 1),
-('tree', 2);
+('bromelaid', 1),
+('orchid', 2),
+('tree', 3),
+('lily', 2),
+('pinecone', 5);
 
 INSERT INTO users (user_name, email, password_digest, address, zipcode, saved_plants, active_plant) VALUES
 ('Trevor', 'trevor@trevor', 'password', 'brokyln ny ', 11230, '{1, 2}', 1),

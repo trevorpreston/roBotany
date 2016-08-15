@@ -1,3 +1,141 @@
+body{
+  margin:0px;
+  height: 100vh;
+  background-color: #FAFAFA;
+  font-family: 'Asap', sans-serif;
+  color: #2E2E2E;
+
+}
+
+h2{
+  font-size: 20px
+}
+
+.container{
+}
+
+#logo{
+  background-image: url('./images/logo.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  top: 15px;
+  left: 30px;
+  height: 70px;
+  width: 70px;
+}
+
+#robotanist{
+  color: white;
+  font-size: 20px;
+  display: inline;
+  position: relative;
+  left: 30px;
+  bottom: 10px
+}
+
+/*.button {
+  background-color: #2E7D32;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}*/
+
+#water-now{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  width: 100%
+}
+
+#water-now:hover{
+  background-color: #2E7D32
+}
+
 #statusBanner {
   background-color: #6BDAFF;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#control{
+  width: 100%;
+  display: inline-block;
+
+}
+
+#bigContainer{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background-color: white;
+  padding-top: 10px;
+  text-align: center;
+  width: 40%;
+  margin: 220px auto;
+}
+
+#fakenav{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  height: 80px;
+  width: 100%;
+  left: 300px;
+  top: 0px;
+  background-color: #2E7D32;
+}
+
+#settingsContainer{
+  text-align: left;
+  background-color:#E0E0E0;
+}
+
+#info1{
+  padding:20px 0px 10px 20%;
+  margin: 0px;
+}
+
+#info2{
+  padding:0px 0px 20px 20%;
+  margin: 0px;
+}
+
+.options{
+ background: transparent;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ border: none;
+ font-size: 14px;
+ height: 29px;
+ padding: 5px;
+ width: 268px;
+}
+
+#updateContainer{
+  margin-bottom:  20px
+}
+
+#setNewPlant{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 7px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 5px
+}
+
+#setNewPlant:hover{
+  background-color: #2E7D32
 }

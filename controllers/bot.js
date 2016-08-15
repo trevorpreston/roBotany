@@ -30,7 +30,13 @@ function waterPlant(){    //THIS
   setTimeout(turnOff, 7000);
 }
 
-function turnOn(req,res,next){
+function waterPlantNow(req,res,next){    //THIS
+  turnOn();
+  setTimeout(turnOff, 7000);
+ next()
+}
+
+function turnOn(){
   gpio.setup(7, gpio.DIR_OUT, write);
   function write(){
     gpio.write(7, true, function(err){
@@ -38,10 +44,9 @@ function turnOn(req,res,next){
       console.log('pump is on!')
     })
   }
-  // next()
 }
 
-function turnOff(req,res,next){
+function turnOff(){
   gpio.setup(7, gpio.DIR_OUT, write);
   function write(){
     gpio.write(7, false, function(err){
@@ -49,7 +54,6 @@ function turnOff(req,res,next){
       console.log('pump turned off!')
     })
   }
-  // next()
 }
 
-module.exports = { waterPlant, turnOn, turnOff, setBotTimer }
+module.exports = { waterPlant, turnOn, turnOff, setBotTimer, waterPlantNow }

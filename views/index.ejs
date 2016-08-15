@@ -8,36 +8,48 @@
   <script type='text/javascript' src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
   <script type="text/javascript" src="main.js"></script>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div id="statusBanner"><span id="bannerInfo">Next watering scheduled for </span><span id="nextWaterDate"><%=status%></span></div>
-  <h1>USER DASHBOARD</h1>
-  <h2>Run Manually</h2>
-  <form action="/on" method="get">
-    <input type="submit" value="ON" name="on-btn">
-  </form>
-  <form action="/off" method="get">
-    <input type="submit" value="OFF" name="off-btn">
-  </form>
-  <h2>update robotanist</h2>
-  <form method="POST" action="/active?_method=PUT"">
-    <select name=newPlant>
-      <% plants.forEach(function(plant){ %>
-        <option value="<%= plant.plant_id %>"><%= plant.name %> </option>
-        <%= console.log (plant.plant_id) %>
-      <% }) %>
-    </select>
-    <input type="submit" id="setNewPlant">
-  </form>
-
-  <h2>current settings</h2>
-  <p>currently watering your: <%= activePlant %></p>
-  <p>every: <span id="waterFreq"><%= waterFreq %></span> days</p>
-
-
+  <div id="fakenav">
+    <div id="logo"></div>
+    <p id="robotanist">roBotanist</p>
+  </div>
+  <div class="container" id="bigContainer">
+    <h2>current settings</h2>
+    <div class="container" id="settingsContainer">
+      <p id="info1">currently watering your: <%= activePlant %></p>
+      <p id="info2">every: <span id="waterFreq"><%= waterFreq %></span> minutes</p>
+    </div>
+    <div class="container" id="updateContainer">
+      <h2>update settings</h2>
+      <p>pick a plant from our database</p>
+      <div id="optionsContainer">
+        <form method="POST" action="/active?_method=PUT">
+          <select name=newPlant class="options">
+            <% plants.forEach(function(plant){ %>
+              <option value="<%= plant.plant_id %>" ><%= plant.name %> </option>
+              <%= console.log (plant.plant_id) %>
+            <% }) %>
+          </select>
+          <input class="button" type="submit" id="setNewPlant">
+        </form>
+      </div>
+    </div>
+    <div class="container" id="statusContainer">
+      <div id="statusBanner"><p><span id="bannerInfo">Next watering scheduled for </span><span id="nextWaterDate"><%=status%></span></p></div>
+      <form id="control" action="/on" method="get" >
+        <input class="button" id="water-now" type="submit" value="water now" name="on-btn">
+      </form>
+    </div>
+  </div>
 </body>
 </html>
 
 
 
+
+<!--       <form class="control" action="/off" method="get">
+        <input class="button" type="submit" value="OFF" name="off-btn">
+      </form> -->
