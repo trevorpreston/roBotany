@@ -3,7 +3,7 @@ roBotanist is a plant watering robot!  Through its companion app, users can conf
 
 ##Technologies
 harware schematic:
-<img src="https://github.com/trevp3/roBotany/blob/master/schematic.pdf">
+[]!(http://imgur.com/a/pVa7p)
 
 ##Approach
 
