@@ -1,15 +1,16 @@
 
 console.log("present!")
-const router                      = require('express').Router();
-const { setCycleTime }            = require('../models/bot')
-const { getAllPlants }            = require('../models/plants')
+const router                                       = require('express').Router();
+const { setCycleTime }                             = require('../models/bot')
+const { getAllPlants }                             = require('../models/plants')
+const { setStatusTimer, calcNextWater }            = require('../models/status')
 const { setBotTimer, turnOn, turnOff }             = require('../controllers/bot')
 const { setNewActivePlant, getCurrentActivePlant } = require('../models/user.js')
 
 
 
 router.get('/', getAllPlants, getCurrentActivePlant, (req,res)=>{
-  res.render('index', {plants: res.allplants, activePlant: res.active, waterFreq: res.freq})
+  res.render('index', {plants: res.allplants, activePlant: res.active, waterFreq: res.freq, status: 0})
 });
 
 
@@ -22,11 +23,11 @@ router.get('/plants', getAllPlants, (req,res)=>{
 });
 
 router.get('/active', (req,res)=>{
-  res.redirect('/dash')
+  res.redirect('/')
 })
 
-router.put('/active', setNewActivePlant, setCycleTime, setBotTimer, (req,res)=>{
-  res.redirect('/dash')
+router.put('/active', setNewActivePlant, setCycleTime, setBotTimer, setStatusTimer, calcNextWater, getAllPlants, getCurrentActivePlant, (req,res)=>{
+  res.render('index', {plants: res.allplants, activePlant: res.active, waterFreq: res.freq, status: res.nextWater})
 })
 
 

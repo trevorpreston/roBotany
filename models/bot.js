@@ -19,3 +19,4 @@ function setCycleTime(req,res,next){
 
 
 module.exports = { setCycleTime }
+

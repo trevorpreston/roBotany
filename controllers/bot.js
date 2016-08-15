@@ -27,19 +27,18 @@ function setBotTimer(req,res,next){
 
 function waterPlant(){    //THIS
   turnOn();
-  setTimeout(turnOff, 3000);
+  setTimeout(turnOff, 7000);
 }
 
 function turnOn(req,res,next){
   gpio.setup(7, gpio.DIR_OUT, write);
-
   function write(){
     gpio.write(7, true, function(err){
       if(err) throw err;
       console.log('pump is on!')
     })
   }
-  // next()
+  next()
 }
 
 function turnOff(req,res,next){
@@ -50,7 +49,7 @@ function turnOff(req,res,next){
       console.log('pump turned off!')
     })
   }
-  // next()
+  next()
 }
 
 module.exports = { waterPlant, turnOn, turnOff, setBotTimer }
