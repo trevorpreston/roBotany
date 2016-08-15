@@ -6,11 +6,6 @@ hardware schematic:
 ![](http://i.imgur.com/02PjJcx.png)
 
 ###hardware: 
-*(x1) 
-*(x1) 
-*(x1) 
-*(x1) 
-
 
 * 1N4001 diode (http://adafru.it/755)
 * PN2222A transistor (http://adafru.it/756)
@@ -22,19 +17,15 @@ hardware schematic:
 * PSQL
 * Raspbian/NOOBS
 * JS/JQUery/HTML/CSS
-* 
-
-
-
 
 ##Approach
 
-##Dependencies
-
 ##User Stories
 
-##Wireframs
+##Wireframes
 
 ##Proposal
 
 ##Upcoming Features/Hurdles/Problems
+
+##Special Thanks
