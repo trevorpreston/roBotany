@@ -5,7 +5,7 @@ roBotanist is a plant watering robot!  Through its companion app, users can conf
 hardware schematic:
 ![](http://i.imgur.com/02PjJcx.png)
 
-hardware: 
+###hardware: 
 *(x1) 
 *(x1) 
 *(x1) 
@@ -17,7 +17,12 @@ hardware:
 * 12v 1000mA DC power supply (http://adafru.it/798)
 * peristaltic pump (http://adafru.it/1150)
 
-software:
+###software:
+* Node/Express()
+* PSQL
+* Raspbian/NOOBS
+* JS/JQUery/HTML/CSS
+* 
 
 
 
