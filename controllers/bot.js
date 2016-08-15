@@ -38,7 +38,7 @@ function turnOn(req,res,next){
       console.log('pump is on!')
     })
   }
-  next()
+  // next()
 }
 
 function turnOff(req,res,next){
@@ -49,7 +49,7 @@ function turnOff(req,res,next){
       console.log('pump turned off!')
     })
   }
-  next()
+  // next()
 }
 
 module.exports = { waterPlant, turnOn, turnOff, setBotTimer }
