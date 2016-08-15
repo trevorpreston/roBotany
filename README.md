@@ -1,6 +1,6 @@
 #roBotanist
 ![](http://media2.giphy.com/media/XVPMKPPYa3Gp2/giphy.gif)
-roBotanist is a plant watering robot!  Through its companion app, users can configure roBotanist to water any kind of plant.
+</br>roBotanist is a plant watering robot!  Through its companion app, users can configure roBotanist to water any kind of plant.
 
 ##Technologies
 hardware schematic:
