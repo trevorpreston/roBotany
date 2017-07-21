@@ -1,32 +1,32 @@
-#roBotanist
+# roBotanist
 ![](http://media2.giphy.com/media/XVPMKPPYa3Gp2/giphy.gif)
 </br></br></br>roBotanist is a plant watering robot!  Through its companion app, users can configure roBotanist to water any kind of plant.
 
-##Technologies
+## Technologies
 hardware schematic:
 ![](http://i.imgur.com/02PjJcx.png)
 
-###hardware: 
+### hardware: 
 * Raspberry Pi 3 (https://www.adafruit.com/product/3055)
 * 1N4001 diode (http://adafru.it/755)
 * FQP30N06L Mosfet (https://www.amazon.com/10Pcs-FQP30N06L-FQP30N06-N-Channel-MOSFET/dp/B00VIDTNYM)
 * 12v 1000mA DC power supply (http://adafru.it/798)
 * peristaltic pump (http://adafru.it/1150)
-
-###software:
+ 
+### software:
 * Node/Express()
 * PSQL
 * Raspbian/NOOBS
 * JS/JQUery/HTML/CSS
 
-##Approach
+## Approach
 Research came first.  I had a concept in mind and wanted to see if it had already been done.  Landing on a design that was pretty close to what I wanted, I spent a couple days redesigning and implementing an initial prototype that suited my specific needs.  Once I proved that the pump could be modulated with a Pi, software was next. </br>
 
 Software was fairly straight forward.  I knew that I was going to use a basic MVC architecture so I just jumped right into it.  My personal workflow always starts with the backend and moved forward.  Build DB and tables -> build models -> build routes -> build views.  Once everything worked, I realized that my model for the robot was a little sloppy, so I seperated it into two documents - one model for pulling the data for the bot from the database, and a controller that took that data and set the variables on the Pi.
 
 
 
-##User Stories
+## User Stories
 * As a user I want a pump that automatically waters my plants.
 * As a user I want remote access to my plant watering device.
 * As a user I want to be able to select the frequency that my plants get watered.
@@ -34,20 +34,20 @@ Software was fairly straight forward.  I knew that I was going to use a basic MV
 * As a user I want to know when my plants will be watered next.
 
 
-##Wireframes
+## Wireframes
 ![](http://i.imgur.com/BKS8O3A.png)
-##Proposal
+## Proposal
 https://docs.google.com/document/d/1sTxxELSPHc-4FkUCoSbffH0sw_guBIuC_jBJVE7zMmc/edit
 
-##Upcoming Features/Hurdles/Problems
+## Upcoming Features/Hurdles/Problems
 * The next major feature is to allow users to manually set all aspects of the device, including how much water is given at a time, how often they want it to be watered, and what time of day the plant should be watered.
 * A lot of features in this model are for demonstration purposes only.  The big one, that is going to be updated after demonstrations are finished, is to change the information handling for the "status banner".   Currently the device has two timers, one that is a backend cron job that lives on the pi, and another that is a front-end timer that syncs with the backend timer.  In the final product, the front end will be performing ajax calls to get that data from the backend and not have its own independent timer.
 
-##Special Thanks
-###Peeps
+## Special Thanks
+### Peeps
 * Huge thanks to Ilya Smelansky for consulting me on harware design and testing the initial beta.  His workcan be found on his site: http://ilyasmelansky.com/ or instagram: https://www.instagram.com/ilyasmelansky/
 
-###References (in no particular order)
+### References (in no particular order)
 * "Deployed" via ngrok (https://ngrok.com/)
 * Hardware schematic adapted from this instructable by user "osmithy" http://www.instructables.com/id/Automatically-water-your-small-indoor-plant-using-/
 * Hex colors via colorpicker.com
