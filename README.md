@@ -36,7 +36,7 @@ Software was fairly straight forward.  I knew that I was going to use a basic MV
 
 ## Wireframes
 ![](http://i.imgur.com/BKS8O3A.png)
-## Proposal
+## Concept Paper
 https://docs.google.com/document/d/1sTxxELSPHc-4FkUCoSbffH0sw_guBIuC_jBJVE7zMmc/edit
 
 ## Upcoming Features/Hurdles/Problems
